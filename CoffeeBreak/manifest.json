@@ -1,0 +1,26 @@
+{
+  "name": "My extension",
+  "version": "1.0.0",
+  "description": "Clear browsing history",
+  "manifest_version": 2,
+
+  "background": {
+    "persistent": false,
+    "scripts": [""]
+  },
+
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+
+  "permissions": ["history", "storage"],
+
+  "icons": {
+    "48": "images/icon_48.png",
+    "96": "images/icon_96.png"
+  },
+  "browser_action": {
+    "default_icon": "images/icon_96.png"
+  }
+}
