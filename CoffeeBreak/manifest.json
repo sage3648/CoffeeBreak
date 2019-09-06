@@ -1,7 +1,7 @@
 {
-  "name": "My extension",
+  "name": "CoffeeBreak",
   "version": "1.0.0",
-  "description": "Clear browsing history",
+  "description": "Take small breaks to boost productivity ",
   "manifest_version": 2,
 
   "background": {
@@ -23,5 +23,6 @@
   "browser_action": {
     "default_icon": "images/icon.png",
     "default_popup": "popup.html"
+
   }
 }
