@@ -16,7 +16,7 @@
     "chrome_style": true
   },
 
-  "permissions": ["storage","alarms","tabs"],
+  "permissions": ["storage","alarms","tabs","notifications"],
 
   "icons": {
     "48": "images/icon.png",

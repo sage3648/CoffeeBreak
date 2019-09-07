@@ -45,4 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('daily-schedule').innerHTML = result.test;
     });
     
+    chrome.notifications.getPermissionLevel(function (level){
+        //alert(level);
+    })
 });
