@@ -6,8 +6,9 @@
 
   "background": {
     "persistent": false,
-    "scripts": ["js/events.js",
-                "js/background.js"
+    "scripts": [
+      "js/events.js",
+      "js/background.js"
               ]
   },
 
@@ -15,9 +16,7 @@
     "page": "options.html",
     "chrome_style": true
   },
-
   "permissions": ["storage","alarms","tabs","notifications"],
-
   "icons": {
     "48": "images/icon.png",
     "96": "images/icon.png"

@@ -1,39 +1,18 @@
-
 document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('full_view').addEventListener('click', changeView);
 
-    var target_date = new Date().getTime() + (1000 * 60 * 10); // set the countdown date
-    var days, hours, minutes, seconds; // variables for time units
-
-    var countdown = document.getElementById("tiles"); // get tag element
-
-    getCountdown();
-
-    setInterval(function () { getCountdown(); }, 1000);
-
-    function getCountdown() {
-
-        // find the amount of "seconds" between now and target
-        var current_date = new Date().getTime();
-        var seconds_left = (target_date - current_date) / 1000;
-
-        days = pad(parseInt(seconds_left / 86400));
-        seconds_left = seconds_left % 86400;
-
-        hours = pad(parseInt(seconds_left / 3600));
-        seconds_left = seconds_left % 3600;
-
-        minutes = pad(parseInt(seconds_left / 60));
-        seconds = pad(parseInt(seconds_left % 60));
-
-        // format countdown string + set tag value
-        //countdown.innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>";
-        countdown.innerHTML = "<span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>";
+    function changeView() {
+        chrome.tabs.create({
+            url: "/full_view.html"
+        });
     }
 
-    function pad(n) {
-        return (n < 10 ? '0' : '') + n;
-    }
+    let endDate = new Date().getTime() + (1000 * 60 * 10);
 
+    let clockComponent = document.getElementById("tiles");
+
+    countDownClock = new CountDownClock(endDate, clockComponent);
+    countDownClock.start();
     document.querySelector('#go-to-options').addEventListener('click',function() {
         if (chrome.runtime.openOptionsPage) {
           chrome.runtime.openOptionsPage();
@@ -44,8 +23,5 @@ document.addEventListener('DOMContentLoaded', function () {
     chrome.storage.sync.get(['test'], function(result){
         document.getElementById('daily-schedule').innerHTML = result.test;
     });
-    
-    chrome.notifications.getPermissionLevel(function (level){
-        //alert(level);
-    })
+
 });
