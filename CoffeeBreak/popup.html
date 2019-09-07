@@ -8,10 +8,12 @@
     min-width: 500px;
     min-height: 400px;
 }
-h1 {
+/*h1 {
+!*
     text-align: center;
+*!
     padding: 15px;
-}
+}*/
 #countdown{
 	width: 465px;
 	height: 112px;
@@ -130,12 +132,15 @@ h1 {
 	display: inline-block;
 }
     </style>
+    <button id = "full_view"> Full View</button>
     <script type = "text/javascript" src = "js/popup.js">
     </script>
 </head>
 <body>
     <h1>CoffeeBreak</h1>
+<!--
     <b>Your next break is in</b>
+-->
     <div id="countdown">
         <div id='tiles'></div>
         <div class="labels">
@@ -145,6 +150,7 @@ h1 {
             <li>Secs</li>
         </div>
     </div>
+
 </body>
 
 </html>

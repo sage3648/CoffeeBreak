@@ -14,7 +14,9 @@
     "chrome_style": true
   },
 
-  "permissions": ["storage"],
+  "permissions": [
+    "storage"
+  ],
 
   "icons": {
     "48": "images/icon.png",
