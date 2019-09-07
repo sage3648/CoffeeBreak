@@ -1,6 +1,18 @@
 chrome.runtime.onInstalled.addListener(function(){
-
-    let fakeEvents = generateEvents();
+    let fakeEvents = {
+        "fakeKey1": {
+            date: new Date().getTime() + (1000 * 5),
+            name: "Its time for your computer break"
+        },
+        "fakeKey2": {
+            date: new Date().getTime() + (1000 * 30),
+            name: "Catchup with Sage"
+        },
+        "fakeKey3": {
+            date: new Date().getTime() + (1000 * 45),
+            name: "Catchup with Jagmeet"
+        }
+    }
 
     let setupAlarms = new Alarm();
 
@@ -24,7 +36,7 @@ function generateEvents(){
     events = {
         "fakeKey1": {
             date: new Date().getTime() + (1000 * 15),
-            name: "You need to take a break"
+            name: "Its time for your computer break"
         },
         "fakeKey2": {
             date: new Date().getTime() + (1000 * 30),

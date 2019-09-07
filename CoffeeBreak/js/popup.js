@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
           window.open(chrome.runtime.getURL('options.html'));
         }
     });
-    chrome.storage.sync.get(['test'], function(result){
-        document.getElementById('daily-schedule').innerHTML = result.test;
-    });
+    // chrome.storage.sync.get(['test'], function(result){
+    //     document.getElementById('daily-schedule').innerHTML = result.test;
+    // });
 
 });

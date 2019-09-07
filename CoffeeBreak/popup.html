@@ -131,15 +131,36 @@
 	text-transform: uppercase;
 	display: inline-block;
 }
-    </style>
-    <button id = "full_view"> Full View</button>
+
+#options{
+	text-align:center;
+	margin: 10px;
+	padding: 10px;
+}
+#heading{
+	text-align: center;
+	background:#555;
+	margin: 10px;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+button{
+	background:#bbb;
+	border-radius: 5px;
+}
+	</style>
     <script type = "text/javascript"  src = "js/CountDownClock.js">
     </script>
     <script type="text/javascript" src="js/popup.js">
     </script>
 </head>
 <body>
-    <h1>CoffeeBreak</h1>
+	<h1 id='heading'>CoffeeBreak</h1>
+	<div id='options'>
+			<button id = "full_view"> Full View</button>
+			<button id="go-to-options">Go to options</button>
+	</div>
 <!--
     <b>Your next break is in</b>
 -->
@@ -154,7 +175,6 @@
     </div>
 
 	</div>
-	<button id="go-to-options">Go to options</button>
 	<div id="daily-schedule">
 
 	</div>
