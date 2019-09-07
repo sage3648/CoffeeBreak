@@ -5,7 +5,15 @@ document.addEventListener('DOMContentLoaded', function () {
     let clockComponent = document.getElementById("tiles");
 
     countDownClock = new CountDownClock(endDate, clockComponent);
-
     countDownClock.start();
-
+    document.querySelector('#go-to-options').addEventListener('click',function() {
+        if (chrome.runtime.openOptionsPage) {
+          chrome.runtime.openOptionsPage();
+        } else {
+          window.open(chrome.runtime.getURL('options.html'));
+        }
+    });
+    chrome.storage.sync.get(['test'], function(result){
+        document.getElementById('daily-schedule').innerHTML = result.test;
+    });
 });
