@@ -15,7 +15,6 @@
   },
 
   "permissions": ["storage"],
-
   "icons": {
     "48": "images/icon.png",
     "96": "images/icon.png"
