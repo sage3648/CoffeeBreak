@@ -81,11 +81,15 @@
     <link href='fullcalendar/core/main.css' rel='stylesheet' />
     <link href='fullcalendar/daygrid/main.css' rel='stylesheet' />
     <link href='fullcalendar/timegrid/main.css' rel='stylesheet' />
+    <link href='fullcalendar/bootstrap/main.css' rel='stylesheet' />
+
 
 
     <script src='fullcalendar/core/main.js'></script>
     <script src='fullcalendar/daygrid/main.js'></script>
     <script src = 'fullcalendar/timegrid/main.js'> </script>
+    <script src = 'fullcalendar/bootstrap/main.js'> </script>
+
 
 
     <link href='fullcalendar/core/main.css' rel='stylesheet' />
@@ -99,10 +103,19 @@
 </head>
 <body>
 <style>
-    .jumbotron {
+    #mid {
         padding: 10px;
-        min-height: 550px;
-        min-width: 300px;
+        min-width: 350px;
+        min-height: 615px;
+
+    }
+    body {
+        padding: 10px;
+    }
+    #right {
+        padding: 10px;
+        min-width: 350px;
+        min-height: 615px;
 
     }
     body {
@@ -115,19 +128,21 @@
     <div class="row">
         <div class="col-sm">
             <div class="jumbotron">
-                <h1 class="display-5">Suggested Breaks</h1>
-                <hr class="my-4">
-                <p></p>
-                <a class="btn btn-primary btn-sl" href="#" role="button">Add Event</a>
+            </div>
+            <div class="jumbotron">
+            </div>
+            <div class="jumbotron">
+            </div>
+            <div class="jumbotron">
             </div>
         </div>
         <div class="col-sm">
-            <div class="jumbotron">
+            <div class="jumbotron" id = 'mid'>
                 <h1 class="display-4"></h1>
             </div>
         </div>
         <div class="col-sm">
-            <div class="jumbotron">
+            <div class="jumbotron" id = 'right'>
                 <div id='calendar'></div>
             </div>
         </div>
