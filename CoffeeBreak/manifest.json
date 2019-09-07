@@ -7,7 +7,8 @@
   "background": {
     "persistent": false,
     "scripts": [
-      "js/events.js",
+      "js/LocalNotification.js",
+      "js/Alarm.js",
       "js/background.js"
               ]
   },
