@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function changeView() {
         chrome.tabs.create({
-            url: "/full_view.html"
+            url: "/fullView.html"
         });
     }
 
