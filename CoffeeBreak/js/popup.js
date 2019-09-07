@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('full_view').addEventListener('click', changeView);
+
+    function changeView() {
+        chrome.tabs.create({
+            url: "/full_view.html"
+        });
+    }
 
     let endDate = new Date().getTime() + (1000 * 60 * 10);
 
