@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         businessHours: true,
         allDaySlot: false,
+        height: 600,
 
         events: [
             {
