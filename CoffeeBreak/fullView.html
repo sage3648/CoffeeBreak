@@ -85,7 +85,9 @@
 
 
 
-    <script src='fullcalendar/core/main.js'></script>
+
+
+        <script src='fullcalendar/core/main.js'></script>
     <script src='fullcalendar/daygrid/main.js'></script>
     <script src = 'fullcalendar/timegrid/main.js'> </script>
     <script src = 'fullcalendar/bootstrap/main.js'> </script>
@@ -101,16 +103,28 @@
     <script src = /js/fullView.js>
     </script>
 </head>
-<body style="background-color: #ffffe3">
+<body style="background-color: whitesmoke">
 <style>
-    #mid {
-        padding: 10px;
-        min-width: 350px;
-        min-height: 615px;
+
+
+    /*Replace below images with OC or reference!!!*/
+    #loc1{
+        background-image: url("https://scx2.b-cdn.net/gfx/news/2018/europeslostf.jpg");
+        background-size: cover;
     }
-    body {
-        padding: 10px;
+    #loc2{
+        background-image: url("https://www.kochiesbusinessbuilders.com.au/wp-content/uploads/2019/07/AdobeStock_186505305.jpeg");
+        background-size: cover;
     }
+    #loc3{
+        background-image: url("https://image.redbull.com/rbcom/052/2018-07-06/7fa619f5-529b-4168-bba8-6a01725ff786/0012/0/0/0/3295/4942/1050/1/climbing-collection.jpg");
+        background-size: cover;
+    }
+    #loc4{
+        background-image: url("https://content.active.com/Assets/Active.com+Content+Site+Digital+Assets/Cycling/Articles/3-Month+Training+Plan/cyclist-carousel.jpg");
+        background-size: cover;
+    }
+
     #right {
         padding: 10px;
         min-width: 350px;
@@ -120,25 +134,47 @@
     body {
         padding: 10px;
     }
+
+    p
+    {
+        text-align: center;
+        padding: 1px;
+    }
+    h1
+    {
+        text-align: center;
+        padding: 1px;
+    }
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
 </style>
 
 
 <div class="container">
     <div class="row">
         <div class="col-sm">
-            <div class="jumbotron">
+            <div class="jumbotron" id = 'loc1'>
             </div>
-            <div class="jumbotron">
+            <div class="jumbotron" id = 'loc2'>
             </div>
-            <div class="jumbotron">
+            <div class="jumbotron" id = 'loc3'>
             </div>
-            <div class="jumbotron">
+            <div class="jumbotron" id = 'loc4'>
             </div>
         </div>
         <div class="col-sm">
-            <div class="jumbotron" id = 'mid'>
+           <!-- <div class="jumbotron" id = 'mid'>
                 <h1 class="display-4"></h1>
-            </div>
+            </div>-->
+            <p>DON'T FORGOT YOUR</p>
+            <h1>CoffeeBreak</h1>
+<!--  source below https://www.pinclipart.com/downpngs/hRRoxi_coffee-addict-tee-fury-cartoon-clipart/-->
+            <img src="/images/mug.png" height="200", width="200" align="middle">
         </div>
         <div class="col-sm">
             <div class="jumbotron" id = 'right'>

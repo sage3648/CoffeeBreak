@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         allDaySlot: false,
         height: 600,
 
+
         events: [
             {
                 title  : 'Lunch with Molly!',
