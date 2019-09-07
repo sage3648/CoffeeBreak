@@ -23,4 +23,5 @@ document.addEventListener('DOMContentLoaded', function () {
     chrome.storage.sync.get(['test'], function(result){
         document.getElementById('daily-schedule').innerHTML = result.test;
     });
+
 });
