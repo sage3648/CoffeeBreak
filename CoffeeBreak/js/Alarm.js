@@ -13,13 +13,14 @@ class Alarm{
 
     setEventAlarms(events){
         for(event in events){
+            console.log(events[event], event);
             this.setEventAlarm(event, events[event].date);
         }
     }
 
     async clearEventAlarm(eventKey){
         const alarmKey = eventKey;
-        await this.AlarmService.clear(alarmKey);  
+        await this.AlarmService.clear(alarmKey);
     }
 
     waitForAlarms(onAlarm = (alarm) => {}){

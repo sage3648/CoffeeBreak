@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', async function () {
     document.getElementById('full_view').addEventListener('click', changeView);
 
     function changeView() {
@@ -7,7 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    let endDate = new Date().getTime() + (1000 * 60 * 10);
+    let nextEvent = await new Events().getNextEvent();
+
+    let endDate = nextEvent.date;
 
     let clockComponent = document.getElementById("tiles");
 

@@ -13,16 +13,23 @@ class CountDownClock {
          // get tag element
         // find the amount of "seconds" between now and target
         let currentDate = new Date().getTime();
-        let secondsLeft = (this.TargetDate - currentDate) / 1000;
+        if(currentDate > this.TargetDate){
+            this.Days = this.pad(0);
+            this.Hours = this.pad(0);
+            this.Minutes = this.pad(0);
+            this.Seconds = this.pad(0);
+        } else {
+            let secondsLeft = (this.TargetDate - currentDate) / 1000;
 
-        this.Days = this.pad(parseInt(secondsLeft / 86400));
-        secondsLeft = secondsLeft % 86400;
+            this.Days = this.pad(parseInt(secondsLeft / 86400));
+            secondsLeft = secondsLeft % 86400;
 
-        this.Hours = this.pad(parseInt(secondsLeft / 3600));
-        secondsLeft = secondsLeft % 3600;
+            this.Hours = this.pad(parseInt(secondsLeft / 3600));
+            secondsLeft = secondsLeft % 3600;
 
-        this.Minutes = this.pad(parseInt(secondsLeft / 60));
-        this.Seconds = this.pad(parseInt(secondsLeft % 60));
+            this.Minutes = this.pad(parseInt(secondsLeft / 60));
+            this.Seconds = this.pad(parseInt(secondsLeft % 60));
+        }
 
         // format countdown string + set tag value removing the days
         //countdown.innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>";

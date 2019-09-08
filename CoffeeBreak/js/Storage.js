@@ -5,13 +5,30 @@ class Storage {
     }
 
     async getFromStore(key){
-        let result = await this.ChromeSyncStorage.get([key]);
-        console.log(`The value retrieved for ${key} is ${value}`);
+        return new Promise((resolve, reject) => {
+            try {
+                this.ChromeSyncStorage.get(key, function (value) {
+                    resolve(value[key]);
+                })
+            }
+            catch (ex) {
+                reject(ex);
+            }
+        });
     }
 
     async saveToStore(value, key){
-        await this.ChromeSyncStorage.set({ key: value });
-        console.log(`The new value set for ${key} is ${value}`);
+        return new Promise((resolve, reject) => {
+            try {
+                this.ChromeSyncStorage.set({ [key]: value }, function () {
+                    resolve();
+                })
+            }
+            catch (ex) {
+                reject(ex);
+            }
+        });
+
     }
 
 }
