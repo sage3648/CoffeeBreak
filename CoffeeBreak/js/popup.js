@@ -22,8 +22,4 @@ document.addEventListener('DOMContentLoaded', async function () {
           window.open(chrome.runtime.getURL('options.html'));
         }
     });
-    // chrome.storage.sync.get(['test'], function(result){
-    //     document.getElementById('daily-schedule').innerHTML = result.test;
-    // });
-
 });

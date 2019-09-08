@@ -1,138 +1,108 @@
 <html>
 <head>
-		<link href="https://fonts.googleapis.com/css?family=Suranna&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Suranna&display=swap" rel="stylesheet">
     <style>
-    body{
-	font-family: 'Suranna', serif;
+		body{
+			font-family: 'Suranna', serif;
+			font: normal 13px/20px Arial, Helvetica, sans-serif; word-wrap:break-word;
+			color: black;
+			background: #353535;
+			min-width: 500px;
+			min-height: 400px;
+			background: #ffffe0;
+		}
 
-	font: normal 13px/20px Arial, Helvetica, sans-serif; word-wrap:break-word;
-	color: black;
-	background: #353535;
-    min-width: 500px;
-    min-height: 400px;
-	background: #ffffe0;
-}
-/*h1 {
-!*
-    text-align: center;
-*!
-    padding: 15px;
-}*/
-
-
-#countdown{
-	width: 465px;
-	height: 112px;
-	text-align: center;
-	border-radius: 5px;
-	margin: auto;
-  	top: 0; bottom: 0; left: 0; right: 0;
-}
+		#countdown{
+			width: 465px;
+			height: 112px;
+			text-align: center;
+			border-radius: 5px;
+			margin: auto;
+			top: 0; bottom: 0; left: 0; right: 0;
+		}
 
 
-#countdown #tiles{
-	position: relative;
-	z-index: 1;
-}
+		#countdown #tiles{
+			position: relative;
+			z-index: 1;
+		}
 
-#countdown #tiles > span{
-	font-size: 20px;
-	text-align: center;
-	color: #111;
-	border-radius: 3px;
-	margin: 0 7px;
-	padding: 18px 0;
-	display: inline-block;
-	position: relative;
-}
+		#countdown #tiles > span{
+			font-size: 20px;
+			text-align: center;
+			color: #111;
+			border-radius: 3px;
+			margin: 0 7px;
+			padding: 18px 0;
+			display: inline-block;
+			position: relative;
+		}
 
-#options{
-	text-align:center;
-	margin: 10px;
-	padding: 10px;
-	font-family: 'Suranna', serif;
+		#options{
+			text-align:center;
+			margin: 10px;
+			padding: 10px;
+			font-family: 'Suranna', serif;
 
-}
-.heading{
-	font-family: 'Suranna', serif;
-	text-align: center;
-	margin: 10px;
-	font-size: 20px
-}
+		}
+		.heading{
+			font-family: 'Suranna', serif;
+			text-align: center;
+			margin: 10px;
+			font-size: 20px
+		}
 
-button{
-	background:#bbb;
-	border-radius: 5px;
-	font-family: 'Suranna', serif;
-	border: none;
+		button{
+			background:#bbb;
+			border-radius: 5px;
+			font-family: 'Suranna', serif;
+			border: none;
 
-}
-.popup-buttons{
- padding: 10px;
- width: 100%;
- height: 40px;
- box-sizing: border-box;
-}
-
-.popup-buttons{
-
+		}
+		.popup-buttons{
+			padding: 10px;
+			width: 100%;
+			height: 40px;
+			box-sizing: border-box;
+			text-align:center;
+		}
 
 
-}
+		.popup-buttons button {
+			background: #eee;
+			color: black;
+			border-radius: 4px;
+			width: 100px;
+			height: 30px;
+		}
+	</style>
 
-.popup-buttons button {
-
-    display: inline-block;
-    background: #eee;
-    color: black;
-    border-radius: 4px;
-    width: 100px;
-    height: 30px;
-}
-    </style>
-
-    <script type = "text/javascript"  src = "js/Storage.js"></script>
-    <script type = "text/javascript"  src = "js/Events.js"></script>
-
-    <script type = "text/javascript"  src = "js/CountDownClock.js">
-    </script>
-    <script type="text/javascript" src="js/popup.js">
-    </script>
+	<script type = "text/javascript"  src = "js/Storage.js"></script>
+	<script type = "text/javascript"  src = "js/Events.js"></script>
+	<script type = "text/javascript"  src = "js/CountDownClock.js"></script>
+	<script type="text/javascript" src="js/popup.js"></script>
 </head>
 <body>
 	<div class='heading'>
-	<p >DON'T FORGOT YOUR</p>
-	<h1 >CoffeeBreak</h1>
+		<p >DON'T FORGOT YOUR</p>
+		<h1 >CoffeeBreak</h1>
 	</div>
 
-<!--
-    <b>Your next break is in</b>
--->	<div style='text-align:center;'>
+	<div style='text-align:center;'>
 		<img src='images/mug1.png' width='200px' height='200px'>
 	</div>
 	<div class='heading'>
-	<h1>Next break in:</h1>
+		<h1>Next break in:</h1>
 	</div>
+
 	<div id="countdown">
         <div id='tiles'></div>
-        <div class="labels">
-            <!-- <li>Days</li> -->
-            <!--<li>Hours</li>
-            <li>Mins</li>
-            <li>Secs</li>-->
-        </div>
-    </div>
+	</div>
+	
     <div class = "popup-buttons">
         <button id="go-to-options">Go to options</button>
         <button id="full_view"> Full View</button>
-    </div>
 	</div>
-
-	<div id='options'>
-			<button id = "full_view"> Full View</button>
-			<button id="go-to-options">Go to options</button>
-	</div>
-
 </body>
 
 </html>
