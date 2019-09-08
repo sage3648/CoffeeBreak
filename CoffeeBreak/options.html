@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <style>
+        body{
+            height: 100px;
+        }
+        #save{
+            float:right;
+        }
+        #interval{
+            float:left;
+        }
+    </style>
     <meta charset="UTF-8">
     <title>options</title>
 </head>
 <body>
-<span>Regular Interval period</span>
-<select id="interval">
+
+<div id="interval">
+<span >Regular Interval period</span>
+<select >
     <option value='15'>15 Minutes</option>
     <option value='30'>30 Minutes</option>
     <option value='60'>Every Hour</option>
     <option value='120'>Every 2 Hours</option>
 </select>
-<br>
+</div>
 <button id='save'>Save</button>
 <script src="js/options.js"></script>
 

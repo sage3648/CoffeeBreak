@@ -1,9 +1,11 @@
+
 chrome.runtime.onInstalled.addListener(async function(){
 
     let fakeEvents = await generateEvents();
 
     //console.log("Hey");
     //console.log(fakeEvents);
+
 
     let setupAlarms = new Alarm();
 
@@ -57,5 +59,23 @@ async function generateEvents(){
     //     }
     // }
 
-    // return events;
+    //
+function generateEvents(){
+    events = {
+        "fakeKey1": {
+            date: new Date().getTime() + (1000 * 15),
+            name: "Its time for your computer break"
+        },
+        "fakeKey2": {
+            date: new Date().getTime() + (1000 * 30),
+            name: "Catchup with Sage"
+        },
+        "fakeKey3": {
+            date: new Date().getTime() + (1000 * 45),
+            name: "Catchup with Jagmeet"
+        }
+    }
+
+    return events;
+}
 }
