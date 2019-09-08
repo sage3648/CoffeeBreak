@@ -71,6 +71,7 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
+        <link href="https://fonts.googleapis.com/css?family=Suranna&display=swap" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -100,13 +101,42 @@
     <script src='fullcalendar/core/main.js'></script>
     <script src='fullcalendar/daygrid/main.js'></script>
 
-    <script src = /js/fullView.js>
+    <script src = "/js/fullView.js">
     </script>
 </head>
-<body style="background-color: whitesmoke">
+<body>
 <style>
+    body{
+        font-family: 'Suranna', serif;
+        background:#ffffe0;
+    }
+
+        
+    #countdown{
+        width: 465px;
+        height: 112px;
+        text-align: center;
+        border-radius: 5px;
+        margin: auto;
+        top: 0; bottom: 0; left: 0; right: 0;
+    }
 
 
+    #countdown #tiles{
+        position: relative;
+        z-index: 1;
+    }
+
+    #countdown #tiles > span{
+        font-size: 20px;
+        text-align: center;
+        color: #111;
+        border-radius: 3px;
+        margin: 0 7px;
+        padding: 18px 0;
+        display: inline-block;
+        position: relative;
+    }
     /*Replace below images with OC or reference!!!*/
     #loc1{
         background-image: url("https://scx2.b-cdn.net/gfx/news/2018/europeslostf.jpg");
@@ -152,6 +182,11 @@
         width: 50%;
     }
 
+    .col-sm{
+        margin:5px;
+        border-radius: 5px;
+    }
+
 </style>
 
 
@@ -174,7 +209,11 @@
             <p>DON'T FORGOT YOUR</p>
             <h1>CoffeeBreak</h1>
 <!--  source below https://www.pinclipart.com/downpngs/hRRoxi_coffee-addict-tee-fury-cartoon-clipart/-->
-            <img src="/images/mug.png" height="200", width="200" align="middle">
+            <img src="/images/mug1.png" height="200", width="200" align="middle">
+                <h1>Next break in:</h1>
+            <div id="countdown">
+                    <div id='tiles'></div>
+            </div>
         </div>
         <div class="col-sm">
             <div class="jumbotron" id = 'right'>

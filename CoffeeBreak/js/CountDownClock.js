@@ -27,7 +27,7 @@ class CountDownClock {
         // format countdown string + set tag value removing the days
         //countdown.innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>";
 
-        this.Component.innerHTML = "<span>" + this.Hours + "</span><span>" + this.Minutes + "</span><span>" + this.Seconds + "</span>";
+        this.Component.innerHTML = "<span>" + this.Hours + "</span>:<span>" + this.Minutes + "</span>:<span>" + this.Seconds + "</span>";
     }
 
     pad(n) {
